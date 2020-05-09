@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: pod
+metadata:
+  name: go-artifact
+spec:
+  containers:
+  - image: shahnishit/jenkins-docker:31
+    imagePullPolicy: IfNotPresent
+    name: go-artifact
+
