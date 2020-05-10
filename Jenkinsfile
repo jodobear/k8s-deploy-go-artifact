@@ -6,7 +6,8 @@ pipeline {
   stages {
     stage ('Delete Resources') {
       steps {
-        sh 'rm k8s-deploy-go-artifact.yaml'
+        sh 'rm k8s-deploy-go-artifact.yaml && kubectl delete
+          deployments/go-artifact-deployment'
       }
     }
     stage ('Start Environment') {
